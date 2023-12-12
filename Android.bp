@@ -485,3 +485,23 @@ prebuilt_etc_xml {
 	soc_specific: true,
 }
 
+cc_prebuilt_library_shared {
+    name: "libprotobuf-cpp-lite-3.9.1-vendorcompat",
+    stem: "libprotobuf-cpp-lite-3.9.1",
+    vendor: true,
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libprotobuf-cpp-lite-3.9.1.so"],
+        }
+    },
+
+    shared_libs: [
+        "libc++",
+        "libc",
+        "libdl",
+        "liblog",
+        "libm",
+        "libz",
+    ],
+}
+
